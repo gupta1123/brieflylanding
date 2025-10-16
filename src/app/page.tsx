@@ -50,7 +50,6 @@ export default function BrieflyLanding() {
       <HowItWorks />
       <Security />
       <Proof />
-      <Pricing />
       <FAQ />
       <FinalCTA />
       <ClientsSection />
@@ -75,7 +74,6 @@ function NavBar() {
           <a className="hover:text-neutral-900" href="#product">Product</a>
           <a className="hover:text-neutral-900" href="#solutions">Use Cases</a>
           <a className="hover:text-neutral-900" href="#how-it-works">How it Works</a>
-          <a className="hover:text-neutral-900" href="#pricing">Pricing</a>
           <a className="hover:text-neutral-900" href="/security">Security</a>
         </nav>
         <div className="hidden items-center gap-2 md:flex">
@@ -814,63 +812,6 @@ function Metric({ kpi, label }: { kpi: string; label: string }) {
   );
 }
 
-function Pricing() {
-  const tiers = [
-    {
-      name: "Starter",
-      desc: "For small teams getting started.",
-      storage: "20 GB",
-      seats: "2 seats",
-      bullets: ["Q&A with citations", "OCR ingestion", "Basic limits"],
-    },
-    {
-      name: "Growth",
-      desc: "For scaling departments.",
-      storage: "100 GB",
-      seats: "5 seats",
-      bullets: ["Versioning & diffs", "Extraction", "SSO + higher limits"],
-    },
-    {
-      name: "Enterprise",
-      desc: "For regulated orgs.",
-      storage: "200 GB",
-      seats: "10 seats",
-      bullets: ["VPC/On‑Prem/Air‑Gapped", "Advanced RBAC & logs", "DPA + SLA"],
-    },
-  ];
-
-  return (
-    <section id="pricing" className="py-14 md:py-20">
-      <Container>
-        <SectionHeading overline="Plans" title="Choose the right plan for your team" />
-        <div className="grid gap-4 md:grid-cols-3">
-          {tiers.map((t) => (
-            <Card key={t.name} className="rounded-2xl border-neutral-200">
-              <CardHeader>
-                <CardTitle className="text-lg">{t.name}</CardTitle>
-                <div className="text-sm text-neutral-500">{t.desc}</div>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="space-y-1">
-                  <div className="text-xl font-semibold">{t.storage}</div>
-                  <div className="text-sm text-neutral-600">{t.seats}</div>
-                </div>
-                <ul className="space-y-2 text-sm text-neutral-700">
-                  {t.bullets.map((b, i) => (
-                    <li key={i} className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4" /> {b}</li>
-                  ))}
-                </ul>
-                <Button asChild className="mt-2 w-full rounded-xl">
-                  <a href="mailto:team@briefly-docs.com">Contact Us</a>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
 
 function FAQ() {
   const faqs = [
@@ -965,7 +906,6 @@ function Footer() {
         <div>
           <FooterCol title="Company" links={[
             { label: "Security", href: "/security" },
-            { label: "Pricing", href: "#pricing" },
             { label: "Contact", href: "/contact" }
           ]} />
         </div>
