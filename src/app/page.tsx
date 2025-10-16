@@ -53,6 +53,7 @@ export default function BrieflyLanding() {
       <Pricing />
       <FAQ />
       <FinalCTA />
+      <ClientsSection />
       <Footer />
     </main>
   );
@@ -144,6 +145,51 @@ function Hero() {
         <motion.div className="relative" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22,1,0.36,1] as any, delay: 0.2 }}>
           <HeroChatVisual />
         </motion.div>
+      </Container>
+    </section>
+  );
+}
+
+function ClientsSection() {
+  const clients = [
+    { name: "Gajkesari", logo: "/Gajkesari.jpeg" },
+    { name: "Kalika", logo: "/Kalika.jpeg" },
+    { name: "MEPL", logo: "/MEPL.png" },
+    { name: "Polaad", logo: "/polaad.png" }
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <Container>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-semibold text-neutral-900 mb-4">Trusted by Industry Leaders</h2>
+          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+            From Fortune 500 companies to growing enterprises, organizations worldwide rely on Briefly Docs 
+            to transform their document workflows and unlock the power of their knowledge.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-8">
+          {clients.map((client, index) => (
+            <motion.div
+              key={client.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <img
+                src={client.logo}
+                alt={`${client.name} logo`}
+                className="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </motion.div>
+          ))}
+        </div>
+        <div className="text-center">
+          <p className="text-sm text-neutral-500">
+            And many more organizations across healthcare, finance, legal, and manufacturing sectors
+          </p>
+        </div>
       </Container>
     </section>
   );
