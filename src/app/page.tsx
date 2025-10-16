@@ -99,7 +99,7 @@ function Hero() {
   };
   const item = {
     hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as any } },
   };
 
   return (
@@ -141,7 +141,7 @@ function Hero() {
         </motion.div>
 
         {/* Improved Hero Visual — Chat-like streaming with citations & evidence panel */}
-        <motion.div className="relative" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22,1,0.36,1], delay: 0.2 }}>
+        <motion.div className="relative" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22,1,0.36,1] as any, delay: 0.2 }}>
           <HeroChatVisual />
         </motion.div>
       </Container>
@@ -242,7 +242,7 @@ function HeroChatVisual() {
                       initial={{ opacity: 0, y: 6 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0 }}
-                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] as any }}
                       className="mb-2"
                       dangerouslySetInnerHTML={{ __html: mdToHtml(b.t) }}
                     />
@@ -518,7 +518,7 @@ function BentoCapabilities() {
   ];
 
   const grid = { hidden: {}, show: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } } };
-  const tile = { hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } } };
+  const tile = { hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as any } } };
 
   return (
     <section className="py-14 md:py-20">
@@ -612,7 +612,7 @@ function UseCases() {
 
 function AnimatedGrid({ items }: { items: any[] }) {
   const grid = { show: { transition: { staggerChildren: 0.06, delayChildren: 0.05 } } };
-  const card = { hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22,1,0.36,1] } } };
+  const card = { hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22,1,0.36,1] as any } } };
   return (
     <motion.div variants={grid} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid gap-4 md:grid-cols-3">
       {items.map((f, i) => (
