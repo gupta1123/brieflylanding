@@ -78,7 +78,7 @@ function NavBar() {
         </nav>
         <div className="hidden items-center gap-2 md:flex">
           <Button asChild className="rounded-xl">
-            <a href="https://calendly.com/solutionnyx/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
+            <a href="https://calendly.com/team-briefly-docs/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
           </Button>
         </div>
         <div className="md:hidden">
@@ -114,7 +114,7 @@ function Hero() {
           </motion.p>
           <motion.div variants={item} className="mt-6 flex flex-wrap items-center gap-3">
             <Button asChild className="rounded-xl">
-              <a href="https://calendly.com/solutionnyx/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
+              <a href="https://calendly.com/team-briefly-docs/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
             </Button>
             <Button asChild variant="outline" className="rounded-xl">
               <a href="mailto:team@briefly-docs.com">Contact Us</a>
@@ -852,7 +852,7 @@ function FinalCTA() {
             <form className="flex w-full flex-col gap-3 sm:flex-row">
               <Input type="email" placeholder="work@email.com" className="h-11 rounded-xl" />
               <Button asChild className="h-11 rounded-xl">
-                <a href="https://calendly.com/solutionnyx/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
+                <a href="https://calendly.com/team-briefly-docs/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
               </Button>
               <Button asChild variant="outline" className="h-11 rounded-xl">
                 <a href="mailto:team@briefly-docs.com">Contact Us</a>
