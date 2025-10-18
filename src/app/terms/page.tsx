@@ -299,7 +299,6 @@ export default function TermsPage() {
             <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-6 space-y-2">
               <p className="text-neutral-900"><strong>Nyx Solutions</strong></p>
               <p className="text-neutral-700">Email: <a href="mailto:team@briefly-docs.com" className="underline">team@briefly-docs.com</a></p>
-              <p className="text-neutral-700">Phone: <a href="tel:+919765723830" className="underline">+91 97657 23830</a></p>
             </div>
           </section>
         </div>
@@ -313,4 +312,3 @@ export default function TermsPage() {
     </main>
   );
 }
-

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Mail, Phone, Building2, Calendar } from "lucide-react";
+import { ArrowLeft, Mail, Building2, Calendar } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -30,7 +30,7 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid gap-6 md:grid-cols-3 mb-16">
+        <div className="grid gap-6 md:grid-cols-2 mb-16">
           <Card className="rounded-2xl border-neutral-200">
             <CardHeader>
               <Mail className="h-8 w-8 text-neutral-900 mb-2" />
@@ -45,24 +45,6 @@ export default function ContactPage() {
                 className="text-neutral-900 font-medium hover:underline"
               >
                 team@briefly-docs.com
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl border-neutral-200">
-            <CardHeader>
-              <Phone className="h-8 w-8 text-neutral-900 mb-2" />
-              <CardTitle>Call Us</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-neutral-600 mb-4">
-                Monday - Friday, 9 AM - 6 PM IST
-              </p>
-              <a 
-                href="tel:+919765723830" 
-                className="text-neutral-900 font-medium hover:underline"
-              >
-                +91 97657 23830
               </a>
             </CardContent>
           </Card>
@@ -101,74 +83,16 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 mt-8">
-              <div>
-                <h3 className="font-semibold text-neutral-900 mb-3">Contact Information</h3>
-                <div className="space-y-2 text-neutral-600">
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
-                    <a href="mailto:team@briefly-docs.com" className="hover:text-neutral-900">
-                      team@briefly-docs.com
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    <a href="tel:+919765723830" className="hover:text-neutral-900">
-                      +91 97657 23830
-                    </a>
-                  </div>
-                </div>
+            <div className="mt-8 space-y-4 text-neutral-600">
+              <div className="flex items-center gap-2 text-sm">
+                <Mail className="h-4 w-4" />
+                <span>team@briefly-docs.com</span>
               </div>
-
               <div>
-                <h3 className="font-semibold text-neutral-900 mb-3">Business Hours</h3>
-                <div className="space-y-1 text-neutral-600">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
-                  <p>Saturday - Sunday: Closed</p>
-                  <p className="text-sm mt-2">Email support available 24/7</p>
-                </div>
+                <h3 className="font-semibold text-neutral-900 mb-1">Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
+                <p>Saturday - Sunday: Closed</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-6 max-w-3xl mx-auto">
-            <div className="border-b pb-6">
-              <h3 className="font-semibold text-lg mb-2">What's the typical response time?</h3>
-              <p className="text-neutral-600">
-                We aim to respond to all inquiries within 1 business day. Sales and demo requests are typically handled within a few hours during business hours. Enterprise customers have access to priority support channels.
-              </p>
-            </div>
-
-            <div className="border-b pb-6">
-              <h3 className="font-semibold text-lg mb-2">Do you offer product demos?</h3>
-              <p className="text-neutral-600">
-                Yes! We offer personalized 30-minute product demos tailored to your use case. You can schedule a demo directly through our Calendly link or contact us to arrange a custom session.
-              </p>
-            </div>
-
-            <div className="border-b pb-6">
-              <h3 className="font-semibold text-lg mb-2">Can I request a security review?</h3>
-              <p className="text-neutral-600">
-                Absolutely. We're happy to provide security documentation, complete security questionnaires, and schedule dedicated security review calls. Our team can also assist with compliance requirements like DPAs and BAAs.
-              </p>
-            </div>
-
-            <div className="border-b pb-6">
-              <h3 className="font-semibold text-lg mb-2">Do you support international customers?</h3>
-              <p className="text-neutral-600">
-                Yes, we work with customers globally. While our primary office hours are IST, we accommodate different time zones for demos and support. We also offer data residency options in multiple regions.
-              </p>
-            </div>
-
-            <div className="pb-6">
-              <h3 className="font-semibold text-lg mb-2">How do I become a partner?</h3>
-              <p className="text-neutral-600">
-                We're always interested in strategic partnerships. Email us at team@briefly-docs.com with "Partnership Inquiry" in the subject line, and our business development team will reach out to discuss opportunities.
-              </p>
             </div>
           </div>
         </section>
@@ -185,9 +109,6 @@ export default function ContactPage() {
                 Book a Demo
               </a>
             </Button>
-            <Button asChild variant="outline" className="rounded-xl" size="lg">
-              <a href="mailto:team@briefly-docs.com">Send Us an Email</a>
-            </Button>
           </div>
         </section>
       </div>
@@ -200,4 +121,3 @@ export default function ContactPage() {
     </main>
   );
 }
-

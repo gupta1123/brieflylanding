@@ -27,12 +27,9 @@ import {
   Sparkles,
   Boxes,
   Workflow,
-  Copy,
   Link as LinkIcon,
   ChevronDown,
-  ChevronRight,
   Mail,
-  Phone,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -79,11 +76,6 @@ function NavBar() {
         <div className="hidden items-center gap-2 md:flex">
           <Button asChild className="rounded-xl">
             <a href="https://calendly.com/team-briefly-docs/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
-          </Button>
-        </div>
-        <div className="md:hidden">
-          <Button size="icon" variant="ghost" aria-label="Open menu" className="rounded-xl">
-            <Boxes className="h-5 w-5" />
           </Button>
         </div>
       </Container>
@@ -568,7 +560,7 @@ function BentoCapabilities() {
   const tile = { hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as any } } };
 
   return (
-    <section className="py-14 md:py-20">
+    <section id="capabilities" className="py-14 md:py-20">
       <Container>
         <SectionHeading
           overline="Capabilities"
@@ -597,9 +589,6 @@ function BentoCapabilities() {
                 </div>
                 <div className="mt-3">{t.visual}</div>
                 <p className="mt-3 text-sm text-neutral-600">{t.desc}</p>
-                <Button variant="ghost" className="mt-3 h-8 rounded-lg px-2 text-xs text-neutral-700 hover:text-neutral-900">
-                  View example <ArrowRight className="ml-1 h-3 w-3" />
-                </Button>
               </CardContent>
             </motion.div>
           ))}
@@ -730,9 +719,6 @@ function HowItWorks() {
             </Card>
           ))}
         </div>
-        <div className="mt-6">
-          <Button variant="outline" className="rounded-xl">Explore the Evidence Panel</Button>
-        </div>
       </Container>
     </section>
   );
@@ -762,9 +748,6 @@ function Security() {
             </Card>
           ))}
         </div>
-        <div className="mt-6">
-          <Button variant="outline" className="rounded-xl">Review Security Overview</Button>
-        </div>
       </Container>
     </section>
   );
@@ -791,13 +774,11 @@ function Proof() {
                 <div className="rounded-xl border bg-neutral-50 p-2"><Quote className="h-5 w-5 text-neutral-700" /></div>
                 <div>
                   <p className="text-neutral-800">
-                    “Briefly Docs reduced policy lookup time from <span className="font-semibold">15 minutes to 30 seconds</span> with
-                    <span className="font-semibold"> fully cited answers</span> our auditors accept.”
+                    “Briefly Docs gives every shift supervisor in our <span className="font-semibold">steel plants immediate context</span>—policy clause, change log, and source evidence—right when decisions matter.”
                   </p>
-                  <p className="mt-2 text-sm text-neutral-500">Head of Compliance, Leading NBFC</p>
+                  <p className="mt-2 text-sm text-neutral-500">Head of Compliance, Leading Steel Company</p>
                 </div>
               </div>
-              <Button variant="ghost" className="mt-4 rounded-xl px-3">Read the Story →</Button>
             </CardContent>
           </Card>
         </div>
@@ -885,12 +866,6 @@ function Footer() {
               <Mail className="h-4 w-4" />
               <a href="mailto:team@briefly-docs.com" className="hover:text-neutral-900">
                 team@briefly-docs.com
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+919765723830" className="hover:text-neutral-900">
-                +91 97657 23830
               </a>
             </div>
             <div className="flex items-center gap-2">

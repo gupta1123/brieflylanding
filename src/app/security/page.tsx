@@ -429,7 +429,7 @@ export default function SecurityPage() {
         <section className="text-center py-16 border-t">
           <h2 className="text-3xl font-bold mb-4">Questions About Security?</h2>
           <p className="text-neutral-600 mb-8 max-w-2xl mx-auto">
-            Our security team is here to answer your questions and provide additional documentation.
+            We’re happy to answer your security questions and provide additional documentation.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Button asChild className="rounded-xl" size="lg">
@@ -438,7 +438,7 @@ export default function SecurityPage() {
               </a>
             </Button>
             <Button asChild variant="outline" className="rounded-xl" size="lg">
-              <a href="mailto:team@briefly-docs.com">Contact Security Team</a>
+              <a href="mailto:team@briefly-docs.com">Contact Us</a>
             </Button>
           </div>
         </section>
@@ -452,4 +452,3 @@ export default function SecurityPage() {
     </main>
   );
 }
-
