@@ -170,11 +170,11 @@ function ClientsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
             >
-              <img
-                src={client.logo}
-                alt={`${client.name} logo`}
-                className="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-              />
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="h-24 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
             </motion.div>
           ))}
         </div>
