@@ -153,7 +153,10 @@ function ClientsSection() {
     { name: "Gajkesari", logo: "/Gajkesari.jpeg" },
     { name: "Kalika", logo: "/Kalika.jpeg" },
     { name: "MEPL", logo: "/MEPL.png" },
-    { name: "Polaad", logo: "/polaad.png" }
+    { name: "Polaad", logo: "/polaad.png" },
+    { name: "Icon", logo: "/Icon.jpeg" },
+    { name: "Rajuri", logo: "/rajuri.png" },
+    { name: "SRJ", logo: "/SRJ.png" }
   ];
 
   return (
